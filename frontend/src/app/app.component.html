@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Dashboard</ion-list-header>
+          <ion-note>dyosby237@gmail.com</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="'/home'" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="'home'" [md]="'home'"></ion-icon>
+              <ion-label>Home</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+<!--          <ion-menu-toggle auto-hide="false">-->
+<!--            <ion-item lines="none">-->
+<!--              <ion-icon slot="start" ios="person-add" md="person-add"></ion-icon>-->
+<!--              <ion-label>Add new Student</ion-label>-->
+<!--            </ion-item>-->
+<!--          </ion-menu-toggle>-->
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

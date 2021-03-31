@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="onClose()">
+        <ion-icon ios="close" md="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ editing ? 'Update' : 'Add' }} Student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="data.name" color="primary" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="data.email" color="primary" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="data.password" color="primary" name="password" type="password"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" class="ion-margin-top" type="submit"
+                expand="block" color="primary">{{ editing ? 'Update' : 'Save' }}</ion-button>
+  </form>
+</ion-content>
